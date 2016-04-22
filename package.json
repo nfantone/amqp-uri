@@ -1,6 +1,6 @@
 {
   "name": "amqp-uri",
-  "version": "1.0.0",
+  "version": "1.0.1-dev",
   "description": "Create AMQP URI as you would with node's url",
   "main": "index.js",
   "files": [

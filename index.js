@@ -15,7 +15,7 @@
  *
  * `amqp://guest:guest@dev.rabbitmq.com:5672/seneca?frameMax=1024`
  *
- * @module amqp-uri
+ * @module amqpuri
  */
 const pick = require('lodash.pick');
 const assign = require('lodash.assign');

@@ -1,5 +1,5 @@
 # amqp-uri
-[![Build Status](https://travis-ci.org/nfantone/amqp-uri.svg?branch=develop)](https://travis-ci.org/nfantone/amqp-uri)[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)][![codecov.io](https://codecov.io/github/nfantone/amqp-uri/coverage.svg?branch=develop)](https://codecov.io/github/nfantone/amqp-uri?branch=develop)(https://github.com/nfantone/amqp-uri/blob/master/LICENSE)
+[![Build Status](https://travis-ci.org/nfantone/amqp-uri.svg?branch=develop)](https://travis-ci.org/nfantone/amqp-uri)[![codecov.io](https://codecov.io/github/nfantone/amqp-uri/coverage.svg?branch=develop)](https://codecov.io/github/nfantone/amqp-uri?branch=develop)[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/nfantone/amqp-uri/blob/master/LICENSE)
 
 Create AMQP URIs as you would with [node's url][1]
 

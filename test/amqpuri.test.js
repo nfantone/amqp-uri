@@ -17,6 +17,13 @@ describe('amqp-uri', () => {
     expect(result).to.match(/^amqp:\/\//);
   });
 
+  it('should allow SSL protocol amqps://', () => {
+    let result = uri.format({
+      hostname: 'amqps://test.amqphost.com'
+    });
+    expect(result).to.match(/^amqps:\/\//);
+  });
+
   it('should throw TypeError if opts is undefined', () => {
     expect(uri.format.bind(uri, undefined)).to.throw(TypeError);
   });

@@ -1,5 +1,5 @@
 {
-  "name": "amqp-uri",
+  "name": "amqpuri",
   "version": "1.0.1-dev",
   "codename": "Rarified rabbit",
   "description": "Create AMQP URIs the node way",

@@ -3,6 +3,9 @@
   "version": "1.0.0-dev",
   "description": "Create AMQP URI as you would with node's url",
   "main": "index.js",
+  "files": [
+    "index.js"
+  ],
   "scripts": {
     "test": "gulp test",
     "validate": "gulp validate"

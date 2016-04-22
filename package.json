@@ -1,6 +1,6 @@
 {
   "name": "amqpuri",
-  "version": "1.0.2",
+  "version": "1.0.3-dev",
   "codename": "Roentgenological rabbit",
   "description": "Create AMQP URIs the node way",
   "main": "index.js",

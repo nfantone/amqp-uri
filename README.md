@@ -1,5 +1,6 @@
 # amqp-uri
-[![Build Status](https://travis-ci.org/nfantone/amqp-uri.svg?branch=develop)](https://travis-ci.org/nfantone/amqp-uri)[![MIT License](https://img.shields.io/badge/license-ISC-blue.svg?style=flat-square)](https://github.com/nfantone/amqp-uri/blob/master/LICENSE)
+[![Build Status](https://travis-ci.org/nfantone/amqp-uri.svg?branch=develop)](https://travis-ci.org/nfantone/amqp-uri)[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)][![codecov.io](https://codecov.io/github/nfantone/amqp-uri/coverage.svg?branch=develop)](https://codecov.io/github/nfantone/amqp-uri?branch=develop)(https://github.com/nfantone/amqp-uri/blob/master/LICENSE)
+
 Create AMQP URIs as you would with [node's url][1]
 
 [![js-semistandard-style](https://cdn.rawgit.com/flet/semistandard/master/badge.svg)](https://github.com/Flet/semistandard)
@@ -7,6 +8,8 @@ Create AMQP URIs as you would with [node's url][1]
 ```sh
 npm i --save amqp-uri
 ```
+
+> This module does _not_ support `node < 4.0.0`. If you need to install this on `0.12` or prior, consider using [amqp-uri][2]
 
 ## Usage
 
@@ -43,3 +46,4 @@ gulp test
 MIT
 
 [1]: https://nodejs.org/api/url.html
+[2]: https://www.npmjs.com/package/amqp-uri

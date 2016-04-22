@@ -1,4 +1,5 @@
 # amqp-uri
+[![Build Status](https://travis-ci.org/nfantone/amqp-uri.svg?branch=develop)](https://travis-ci.org/nfantone/amqp-uri)[![MIT License](https://img.shields.io/badge/license-ISC-blue.svg?style=flat-square)](https://github.com/nfantone/amqp-uri/blob/master/LICENSE)
 Create AMQP URIs as you would with [node's url][1]
 
 [![js-semistandard-style](https://cdn.rawgit.com/flet/semistandard/master/badge.svg)](https://github.com/Flet/semistandard)

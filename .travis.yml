@@ -1,6 +1,5 @@
  language: node_js
  node_js:
-   - "0.12"
    - "4"
    - "5"
  branches:
@@ -10,6 +9,7 @@
  notifications:
   email:
    - nfantone@gmail.com
- script: gulp test
+ script: gulp test && ./node_modules/.bin/codecov
  before_script:
   - npm install -g gulp
+  - npm install codecov

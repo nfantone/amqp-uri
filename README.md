@@ -1,4 +1,4 @@
-# amqp-uri
+# amqpuri
 [![Build Status](https://travis-ci.org/nfantone/amqp-uri.svg?branch=develop)](https://travis-ci.org/nfantone/amqp-uri)[![codecov.io](https://codecov.io/github/nfantone/amqp-uri/coverage.svg?branch=develop)](https://codecov.io/github/nfantone/amqp-uri?branch=develop)[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/nfantone/amqp-uri/blob/master/LICENSE)
 
 Create AMQP URIs as you would with [node's url][1]
@@ -9,7 +9,7 @@ Create AMQP URIs as you would with [node's url][1]
 npm i --save amqp-uri
 ```
 
-> This module does _not_ support `node < 4.0.0`. If you need to install this on `0.12` or prior, consider using [amqp-uri][2]
+> This module does _not_ support `node < 4.0.0`. If you need to install this on `0.12` (or prior), consider using [amqp-uri][2]
 
 ## Usage
 
@@ -33,7 +33,7 @@ console.log(uri);
 ```
 
 ## Test
-To run tests, clone the repository, install dependencies and call the appropiate `gulp` task.
+To run tests, clone the repository, install dependencies and call the appropriate `gulp` task.
 
 ```sh
 git clone https://github.com/nfantone/amqp-uri.git

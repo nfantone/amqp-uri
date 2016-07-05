@@ -31,7 +31,7 @@
   "homepage": "https://github.com/nfantone/amqp-uri#readme",
   "devDependencies": {
     "chai": "^3.5.0",
-    "eslint": "^2.7.0",
+    "eslint": "^3.0.1",
     "eslint-config-semistandard": "^6.0.1",
     "eslint-config-standard": "^5.1.0",
     "eslint-plugin-promise": "^1.1.0",

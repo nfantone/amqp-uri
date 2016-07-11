@@ -60,6 +60,16 @@ gulp.task('watch', () => gulp.watch(config.paths.src, ['eslint']));
 gulp.task('validate', ['eslint', 'test']);
 
 /**
+ * Uploads coverage report to codecov.io
+ *
+ * `gulp coverage`
+ */
+gulp.task('coverage', () => {
+  return gulp.src(config.codecov.src)
+    .pipe($.codecov());
+});
+
+/**
  * Alias for 'validate'.
  * Default task.
  *

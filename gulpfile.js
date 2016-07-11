@@ -17,7 +17,7 @@ gulp.task('eslint', () =>
   gulp.src(config.paths.src)
     .pipe($.eslint())
     .pipe($.eslint.format())
-    .pipe($.if(config.eslint.failOnError, $.eslint.failOnError()))
+    .pipe($.if(config.eslint.failOnError, $.eslint.failAfterError()))
 );
 
 /**
@@ -64,10 +64,10 @@ gulp.task('validate', ['eslint', 'test']);
  *
  * `gulp coverage`
  */
-gulp.task('coverage', () => {
-  return gulp.src(config.codecov.src)
-    .pipe($.codecov());
-});
+gulp.task('coverage', () =>
+  gulp.src(config.codecov.src)
+    .pipe($.codecov())
+);
 
 /**
  * Alias for 'validate'.

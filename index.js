@@ -18,7 +18,6 @@
  * @module amqpuri
  */
 const pick = require('lodash.pick');
-const assign = require('lodash.assign');
 const last = require('lodash.last');
 const url = require('url');
 
@@ -32,7 +31,7 @@ module.exports = {
 function query(uri, query) {
   query = pick(query, DEFAULT_PARAMETERS);
   if (Object.keys(query).length) {
-    uri.query = assign({}, uri.query, query);
+    uri.query = Object.assign({}, uri.query, query);
   }
   return uri;
 }

@@ -39,7 +39,7 @@ To run tests, clone the repository, install dependencies and call the appropriat
 git clone https://github.com/nfantone/amqp-uri.git amqpuri
 cd amqpuri
 npm i
-gulp test
+npm run test
 ```
 
 ## License

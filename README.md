@@ -3,8 +3,7 @@
 
 Create AMQP URIs as you would with [node's url][1]
 
-[![js-semistandard-style](https://cdn.rawgit.com/flet/semistandard/master/badge.svg)](https://github.com/Flet/semistandard)
-
+## Install
 ```sh
 npm i --save amqpuri
 ```
@@ -12,8 +11,7 @@ npm i --save amqpuri
 > This module does _not_ support `node < 4.0.0`. If you need to install this on `0.12` (or prior), consider using [amqp-uri][2]
 
 ## Usage
-
-```javascript
+```js
 const amqpuri = require('amqpuri');
 
 let uri = amqpuri.format({
@@ -33,7 +31,7 @@ console.log(uri);
 ```
 
 ## Test
-To run tests, clone the repository, install dependencies and call the appropriate `gulp` task.
+To run tests, clone the repository, install dependencies and call the appropriate `npm` script.
 
 ```sh
 git clone https://github.com/nfantone/amqp-uri.git amqpuri

@@ -1,16 +1,21 @@
 language: node_js
 node_js:
-- '5'
+- '4'
 - '6'
 branches:
   only:
   - master
   - develop
-  - /^v?(\\d\\.){2}\\d$/
+  - /^v?(\d\.){2}\d$/
 notifications:
   email:
   - nfantone@gmail.com
+before_install:
+  - npm i -g npm
 script: npm run validate && npm run coverage
+cache:
+  bundler: true
+  directories: node_modules
 deploy:
   provider: npm
   email: nfantone@gmail.com
@@ -19,4 +24,4 @@ deploy:
   on:
     tags: true
     repo: nfantone/amqp-uri
-    node_js: '5'
+    node_js: '6'

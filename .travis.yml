@@ -1,7 +1,7 @@
 language: node_js
 node_js:
-- '4'
 - '6'
+- '7'
 branches:
   only:
   - master
@@ -25,4 +25,4 @@ deploy:
   on:
     tags: true
     repo: nfantone/amqp-uri
-    node_js: '6'
+    node_js: '7'

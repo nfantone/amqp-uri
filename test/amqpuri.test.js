@@ -85,12 +85,6 @@ describe('amqp-uri', () => {
       vhost: 'somevhost'
     });
     expect(result).to.have.string('test.amqphost.com/somevhost');
-
-    result = uri.format({
-      hostname: 'test.amqphost.com',
-      path: 'somevhost'
-    });
-    expect(result).to.have.string('test.amqphost.com/somevhost');
   });
 
   it('should ignore additional unknown options', () => {

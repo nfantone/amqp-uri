@@ -1,4 +1,6 @@
 # amqpuri
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/nfantone/amqp-uri.svg)](https://greenkeeper.io/)
 [![Build Status](https://travis-ci.org/nfantone/amqp-uri.svg?branch=develop)](https://travis-ci.org/nfantone/amqp-uri) [![codecov.io](https://codecov.io/github/nfantone/amqp-uri/coverage.svg?branch=develop)](https://codecov.io/github/nfantone/amqp-uri?branch=develop) [![js-semistandard-style](https://img.shields.io/badge/code%20style-semistandard-brightgreen.svg?style=flat-square)](https://github.com/Flet/semistandard) [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/nfantone/amqp-uri/blob/master/LICENSE)
 
 Create AMQP URIs as you would with [node's url][1]

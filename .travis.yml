@@ -14,7 +14,10 @@ notifications:
   - nfantone@gmail.com
 before_install:
   - npm i -g npm
-script: npm run validate && npm run coverage
+script:
+  - npm run validate
+  - npm run coverage
+  - npm run report-coverage
 cache:
   bundler: true
   directories: node_modules

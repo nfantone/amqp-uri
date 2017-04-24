@@ -7,6 +7,9 @@
   "files": [
     "index.js"
   ],
+  "engines": {
+    "node": "> 6.0.0"
+  },
   "scripts": {
     "test": "gulp test",
     "validate": "gulp validate",
@@ -33,7 +36,7 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "eslint": "^3.19.0",
-    "eslint-config-semistandard": "^8.0.0",
+    "eslint-config-semistandard": "^11.0.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-node": "^4.2.2",
@@ -49,11 +52,12 @@
     "gulp-release": "^1.1.1",
     "pre-commit": "^1.2.2"
   },
+  "dependencies": {
+    "lodash.curry": "^4.1.1",
+    "lodash.flowright": "^3.5.0",
+    "lodash.pick": "^4.4.0"
+  },
   "pre-commit": [
     "validate"
-  ],
-  "dependencies": {
-    "lodash.last": "^3.0.0",
-    "lodash.pick": "^4.4.0"
-  }
+  ]
 }

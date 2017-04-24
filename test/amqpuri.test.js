@@ -24,8 +24,8 @@ describe('amqp-uri', () => {
     expect(result).to.match(/^amqps:\/\//);
   });
 
-  it('should throw TypeError if opts is undefined', () => {
-    expect(uri.format.bind(uri, undefined)).to.throw(TypeError);
+  it('should not throw Error if opts is undefined', () => {
+    expect(uri.format.bind(uri, undefined)).to.not.throw(Error);
   });
 
   it('should return an empty string if hostname/url/host/href is missing', () => {

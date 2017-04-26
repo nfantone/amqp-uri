@@ -1,18 +1,22 @@
 language: node_js
 node_js:
-- '4'
 - '6'
+- '7'
 branches:
   only:
   - master
   - develop
   - /^v?(\d\.){2}\d$/
+  - /^greenkeeper-.*$/
+  - /^greenkeeper/.*$/
 notifications:
   email:
   - nfantone@gmail.com
 before_install:
   - npm i -g npm
-script: npm run validate && npm run coverage
+script:
+  - npm run validate
+  - npm run report-coverage
 cache:
   bundler: true
   directories: node_modules
@@ -24,4 +28,4 @@ deploy:
   on:
     tags: true
     repo: nfantone/amqp-uri
-    node_js: '6'
+    node_js: '7'

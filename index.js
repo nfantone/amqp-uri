@@ -128,7 +128,7 @@ const vhost = curry(({ vhost, path }, uri) => {
 /**
  * Removes the `host` attribute of `uri` if `opts.host` is not defined. Otherwise,
  * returns the `uri` as is.
- * @param  {Object} An object with a `host` = property.
+ * @param  {Object} An object with a `host` property.
  * @param  {Object} uri   An URI object descriptor.
  * @return {Object} The URI object with host removed (or unmodified).
  */

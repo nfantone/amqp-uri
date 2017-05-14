@@ -140,7 +140,7 @@ const removeHost = curry(({ host }, uri) => {
  * Composes a set of functions to build a single URI formatter function
  * that receives an URI string and returns its normalised version.
  * @param  {Object} opts Options used in URI building.
- * @return {Function}      An URi formatter function.
+ * @return {Function}      An URI formatter function.
  */
 const createUriFormatter = (opts) => compose(
     url.format,

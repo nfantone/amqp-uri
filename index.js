@@ -143,15 +143,15 @@ const removeHost = curry(({ host }, uri) => {
  * @return {Function}      An URI formatter function.
  */
 const createUriFormatter = (opts) => compose(
-    url.format,
-    vhost(opts),
-    port(opts),
-    query(opts),
-    auth(opts),
-    removeHost(opts),
-    url.parse,
-    protocol
-  );
+  url.format,
+  vhost(opts),
+  port(opts),
+  query(opts),
+  auth(opts),
+  removeHost(opts),
+  url.parse,
+  protocol
+);
 
 /**
  * Creates and returns a URI string from a descriptor object with options.

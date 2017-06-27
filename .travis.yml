@@ -1,13 +1,12 @@
 language: node_js
 node_js:
 - '6'
-- '7'
+- '8'
 branches:
   only:
   - master
   - develop
   - /^v?(\d\.){2}\d$/
-  - /^greenkeeper-.*$/
   - /^greenkeeper/.*$/
 notifications:
   email:
@@ -28,4 +27,4 @@ deploy:
   on:
     tags: true
     repo: nfantone/amqp-uri
-    node_js: '7'
+    node_js: '8'

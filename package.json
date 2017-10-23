@@ -37,7 +37,7 @@
   "homepage": "https://github.com/nfantone/amqp-uri#readme",
   "devDependencies": {
     "chai": "^4.0.2",
-    "codecov": "^2.2.0",
+    "codecov": "^3.0.0",
     "eslint": "^4.1.1",
     "eslint-config-semistandard": "^11.0.0",
     "eslint-config-standard": "^10.2.1",

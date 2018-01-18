@@ -80,7 +80,7 @@ const query = curry((query, uri) => {
  */
 const protocol = (uri) => {
   const parts = uri.split('://');
-  return uri.startsWith(DEFAULT_PROTOCOL) ?
+  return uri.startsWith(`${DEFAULT_PROTOCOL}:\/\/`) ?
     uri :
     [DEFAULT_PROTOCOL, last(parts)].join('://');
 };

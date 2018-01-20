@@ -1,6 +1,6 @@
 {
-   "extends": ["semistandard", "plugin:prettier/recommended"],
+  "extends": ["semistandard", "plugin:prettier/recommended"],
   "env": {
-    "mocha": true
+    "jest": true
   }
 }

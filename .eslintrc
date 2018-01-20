@@ -1,5 +1,5 @@
 {
-  "extends": "semistandard",
+   "extends": ["semistandard", "plugin:prettier/recommended"],
   "env": {
     "mocha": true
   },

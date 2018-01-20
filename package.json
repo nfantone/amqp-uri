@@ -11,12 +11,12 @@
     "node": "> 6.0.0"
   },
   "scripts": {
-    "coverage": "nyc npm run test",
-    "test": "NODE_ENV=test mocha --reporter spec --bail test/**/*.test.js",
-    "lint": "eslint index.js test/",
+    "test": "jest",
+    "coverage": "jest --coverage",
+    "report-coverage": "codecov",
+    "lint": "eslint index.js test/ lib/",
     "validate": "npm-run-all lint coverage",
-    "report-coverage": "nyc report --reporter=lcov > coverage.lcov && codecov",
-    "format": "prettier --write index.js test/**/*.js",
+    "format": "prettier --write index.js lib/**/*.js test/**/*.js",
     "precommit": "lint-staged",
     "prepush": "npm test"
   },
@@ -39,7 +39,7 @@
   },
   "homepage": "https://github.com/nfantone/amqp-uri#readme",
   "devDependencies": {
-    "chai": "^4.1.2",
+    "@types/jest": "^22.0.1",
     "codecov": "^3.0.0",
     "eslint": "^4.16.0",
     "eslint-config-prettier": "^2.9.0",
@@ -51,11 +51,9 @@
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1",
     "husk": "^0.5.3",
+    "jest": "^22.1.4",
     "lint-staged": "^6.0.1",
-    "mocha": "^5.0.0",
-    "mocha-junit-reporter": "^1.16.0",
     "npm-run-all": "^4.1.2",
-    "nyc": "^11.4.1",
     "prettier": "^1.10.2"
   },
   "dependencies": {

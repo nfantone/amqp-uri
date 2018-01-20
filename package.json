@@ -13,6 +13,7 @@
   "scripts": {
     "test": "jest",
     "coverage": "jest --coverage",
+    "report-coverage": "codecov",
     "lint": "eslint index.js test/ lib/",
     "validate": "npm-run-all lint coverage",
     "format": "prettier --write index.js lib/**/*.js test/**/*.js",

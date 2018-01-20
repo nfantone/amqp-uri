@@ -12,7 +12,6 @@
   },
   "scripts": {
     "test": "jest",
-    "report-coverage": "codecov",
     "coverage": "jest --coverage",
     "lint": "eslint index.js test/",
     "validate": "npm-run-all lint coverage",

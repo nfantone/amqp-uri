@@ -13,9 +13,9 @@
   "scripts": {
     "test": "jest",
     "coverage": "jest --coverage",
-    "lint": "eslint index.js test/",
+    "lint": "eslint index.js test/ lib/",
     "validate": "npm-run-all lint coverage",
-    "format": "prettier --write index.js test/**/*.js",
+    "format": "prettier --write index.js lib/**/*.js test/**/*.js",
     "precommit": "lint-staged",
     "prepush": "npm test"
   },

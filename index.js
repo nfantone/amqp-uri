@@ -46,7 +46,7 @@ module.exports = {
  * @param  {Array} arr An array.
  * @return {*}     The last element of the array.
  */
-const last = (arr) => arr[arr.length - 1];
+const last = arr => arr[arr.length - 1];
 
 /**
  * Determines if an object has, at least, one attribute.
@@ -54,7 +54,7 @@ const last = (arr) => arr[arr.length - 1];
  * @return {Boolean}    true if `obj` has, at least, one property;
  *                           false, otherwise.
  */
-const isObjectNotEmpty = (obj) => obj && Object.keys(obj).length;
+const isObjectNotEmpty = obj => obj && Object.keys(obj).length;
 
 /**
  * Adds query parameters provided by `query` to the `uri` object.
@@ -63,13 +63,14 @@ const isObjectNotEmpty = (obj) => obj && Object.keys(obj).length;
  * @return {Object} The URI object with the new query parameters.
  */
 const query = curry((query, uri) => {
-  const queryWithDefaultParameters = Object.assign({},
+  const queryWithDefaultParameters = Object.assign(
+    {},
     uri.query,
     pick(query, DEFAULT_PARAMETERS)
   );
-  return isObjectNotEmpty(queryWithDefaultParameters) ?
-    Object.assign({}, uri, { query: queryWithDefaultParameters }) :
-    uri;
+  return isObjectNotEmpty(queryWithDefaultParameters)
+    ? Object.assign({}, uri, { query: queryWithDefaultParameters })
+    : uri;
 });
 
 /**
@@ -78,11 +79,11 @@ const query = curry((query, uri) => {
  * @param  {String} uri An AMQP URI string.
  * @return {String}     The URI string with a prepended protocol.
  */
-const protocol = (uri) => {
+const protocol = uri => {
   const parts = uri.split('://');
-  return uri.startsWith(DEFAULT_PROTOCOL) ?
-    uri :
-    [DEFAULT_PROTOCOL, last(parts)].join('://');
+  return uri.startsWith(DEFAULT_PROTOCOL)
+    ? uri
+    : [DEFAULT_PROTOCOL, last(parts)].join('://');
 };
 
 /**
@@ -93,9 +94,9 @@ const protocol = (uri) => {
  * @return {Object} The URI object with the new auth attribute.
  */
 const auth = curry(({ username, password }, uri) => {
-  return (!uri.auth && username && password) ?
-    Object.assign({}, uri, { auth: [username, password].join(':') }) :
-    uri;
+  return !uri.auth && username && password
+    ? Object.assign({}, uri, { auth: [username, password].join(':') })
+    : uri;
 });
 
 /**
@@ -106,9 +107,7 @@ const auth = curry(({ username, password }, uri) => {
  * @return {Object} The URI object with the new port attribute.
  */
 const port = curry(({ port }, uri) => {
-  return (!uri.port && port) ?
-    Object.assign({}, uri, { port }) :
-    uri;
+  return !uri.port && port ? Object.assign({}, uri, { port }) : uri;
 });
 
 /**
@@ -120,9 +119,7 @@ const port = curry(({ port }, uri) => {
  */
 const vhost = curry(({ vhost, path }, uri) => {
   const pathname = vhost || path;
-  return (!uri.pathname && vhost) ?
-    Object.assign({}, uri, { pathname }) :
-    uri;
+  return !uri.pathname && vhost ? Object.assign({}, uri, { pathname }) : uri;
 });
 
 /**
@@ -142,16 +139,17 @@ const removeHost = curry(({ host }, uri) => {
  * @param  {Object} opts Options used in URI building.
  * @return {Function}      An URI formatter function.
  */
-const createUriFormatter = (opts) => compose(
-  url.format,
-  vhost(opts),
-  port(opts),
-  query(opts),
-  auth(opts),
-  removeHost(opts),
-  url.parse,
-  protocol
-);
+const createUriFormatter = opts =>
+  compose(
+    url.format,
+    vhost(opts),
+    port(opts),
+    query(opts),
+    auth(opts),
+    removeHost(opts),
+    url.parse,
+    protocol
+  );
 
 /**
  * Creates and returns a URI string from a descriptor object with options.

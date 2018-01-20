@@ -16,7 +16,8 @@ before_install:
   - npm i -g npm
 script:
   - npm run validate
-  - npm run report-coverage
+after_success:
+  - ./bin/codecov -e TRAVIS_NODE_VERSION
 cache:
   directories: node_modules
 deploy:

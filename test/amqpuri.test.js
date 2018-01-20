@@ -104,7 +104,9 @@ describe('amqp-uri', () => {
       heartbeat: 500,
       locale: 'en_US'
     });
-    expect(result).to.have.string('?frameMax=1024&channelMax=1000&heartbeat=500&locale=en_US');
+    expect(result).to.have.string(
+      '?frameMax=1024&channelMax=1000&heartbeat=500&locale=en_US'
+    );
   });
 
   it('should allow building a full AMQP URI', () => {
@@ -119,6 +121,8 @@ describe('amqp-uri', () => {
       heartbeat: 500,
       locale: 'en_US'
     });
-    expect(result).to.eql('amqp://guest:guest@test.amqphost.com:5672/vhost?frameMax=1024&channelMax=1000&heartbeat=500&locale=en_US');
+    expect(result).to.eql(
+      'amqp://guest:guest@test.amqphost.com:5672/vhost?frameMax=1024&channelMax=1000&heartbeat=500&locale=en_US'
+    );
   });
 });

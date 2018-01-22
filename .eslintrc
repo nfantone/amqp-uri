@@ -1,13 +1,6 @@
 {
-  "extends": "semistandard",
+  "extends": ["semistandard", "plugin:prettier/recommended"],
   "env": {
-    "mocha": true
-  },
-  "rules": {
-    "callback-return": [2, ["callback", "cb", "done"]],
-    "no-unused-vars": [2, { "vars": "all", "args": "after-used" }],
-    "space-before-function-paren": [2, "never"],
-    "operator-linebreak": [2, "after"],
-    "require-yield": 2
+    "jest": true
   }
 }

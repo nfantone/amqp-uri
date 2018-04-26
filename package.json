@@ -1,6 +1,6 @@
 {
   "name": "amqpuri",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Create AMQP URIs the node way",
   "main": "index.js",
   "files": [

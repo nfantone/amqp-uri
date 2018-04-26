@@ -9,11 +9,11 @@ describe('amqp-uri', () => {
     expect(result).toMatch(/^amqp:\/\//);
   });
 
-  it('should replace protocol if it is not amqp://', () => {
+  it('should not replace protocol if it is not amqp://', () => {
     const result = uri.format({
       hostname: 'ftp://test.amqphost.com'
     });
-    expect(result).toMatch(/^amqp:\/\//);
+    expect(result).toMatch(/^ftp:\/\//);
   });
 
   it('should allow SSL protocol amqps://', () => {
@@ -129,5 +129,16 @@ describe('amqp-uri', () => {
     expect(result).toBe(
       'amqp://guest:guest@test.amqphost.com:5672/vhost?frameMax=1024&channelMax=1000&heartbeat=500&locale=en_US'
     );
+  });
+
+  it('should create correct URI if hostname starts with "amqp"', () => {
+    const result = uri.format({
+      hostname: 'amqp.host.com',
+      port: 5672,
+      vhost: 'vhost',
+      username: 'guest',
+      password: 'guest'
+    });
+    expect(result).toBe('amqp://guest:guest@amqp.host.com:5672/vhost');
   });
 });

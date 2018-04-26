@@ -4,7 +4,8 @@
   "description": "Create AMQP URIs the node way",
   "main": "index.js",
   "files": [
-    "index.js"
+    "index.js",
+    "lib/"
   ],
   "engines": {
     "node": "> 6.0.0"

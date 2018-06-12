@@ -61,12 +61,11 @@ describe('amqp-uri', () => {
     expect(result).toEqual(expect.stringContaining('test.amqphost.com:5432'));
   });
 
-  it('should allow adding a port', () => {
+  it('should not add a port if one is not specified', () => {
     const result = uri.format({
-      hostname: 'test.amqphost.com',
-      port: 5432
+      hostname: 'test.amqphost.com'
     });
-    expect(result).toEqual(expect.stringContaining('test.amqphost.com:5432'));
+    expect(result).toEqual(expect.stringContaining('test.amqphost.com'));
   });
 
   it('should allow adding username and password', () => {

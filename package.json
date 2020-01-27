@@ -39,7 +39,7 @@
   },
   "homepage": "https://github.com/nfantone/amqp-uri#readme",
   "devDependencies": {
-    "@types/jest": "^23.0.2",
+    "@types/jest": "^25.1.0",
     "ajv": "^6.5.1",
     "codecov": "^3.0.2",
     "eslint": "^4.19.1",
